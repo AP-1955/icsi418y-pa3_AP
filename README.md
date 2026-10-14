@@ -1,15 +1,15 @@
-# MERN Stack User Authentication (ICS418Y PA2)
+# MERN Stack Projects and Memberships (ICS418Y PA3)
 
 **Author:** Apollo Pham  
-**Course:** ICSI 418Y - Programming Assignment 2  
+**Course:** ICSI 418Y - Programming Assignment 3  
 
 ## Description
-A full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js) featuring user registration, duplicate username validation, secure password handling, and user login functionality connected to a cloud MongoDB Atlas database.
+A full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js) extending user authentication with project creation, project lead selection, and many-to-many project membership management.
 
 ## Tech Stack
 * **Frontend:** React (Vite), HTML, CSS
 * **Backend:** Node.js, Express.js
-* **Database:** MongoDB Atlas, Mongoose ODM
+* **Database:** MongoDB Atlas, Mongoose ODM (Users, Projects, and ProjectMemberships collections)
 
 ## How to Run
 1. **Clone the repository** and open the project directory.

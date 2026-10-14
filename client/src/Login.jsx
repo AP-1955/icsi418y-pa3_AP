@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-export default function Login({ onSwitch }) {
+export default function Login({ onSwitch, onLoginSuccess }) {
   const [formData, setFormData] = useState({ username: '', password: '' });
   const [message, setMessage] = useState('');
 
@@ -10,11 +10,14 @@ export default function Login({ onSwitch }) {
     try {
       const res = await axios.post('http://localhost:5000/api/login', formData);
       setMessage(res.data.message);
+      setTimeout(() => {
+        onLoginSuccess();
+      }, 500);
     } catch (err) {
       setMessage(err.response?.data?.message || 'Login failed');
     }
   };
-
+    
   return (
     <div style={{ maxWidth: '400px', margin: '50px auto', fontFamily: 'sans-serif' }}>
       <h2>Login</h2>
